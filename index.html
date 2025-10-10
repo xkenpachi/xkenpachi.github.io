@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MiniPost Pro — Offline API & Model Builder</title>
+  <meta name="description" content="MiniPost Pro — Lightweight, privacy-first API testing tool for macOS. Import Postman collections, run requests and auto-generate models (Swift, Python, TypeScript, Java, C#)." />
+  <meta property="og:title" content="MiniPost Pro" />
+  <meta property="og:description" content="Lightweight, privacy-first API tester. Import Postman collections, test endpoints, generate models for multiple languages." />
+  <meta property="og:type" content="website" />
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#94a3b8; --accent:#4f8cff; --glass: rgba(255,255,255,0.04);
+      --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg,#071028 0%, #071a2b 100%); color:#e6eef8; -webkit-font-smoothing:antialiased;
+      line-height:1.5;
+    }
+    .wrap{max-width:var(--maxw); margin:40px auto; padding:28px;}
+    header{display:flex;align-items:center;gap:16px;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo .mark{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#12c2e9)}
+    .logo h1{font-size:18px;margin:0}
+    .lang{font-size:14px;color:var(--muted)}
+    .hero{display:flex;gap:28px;margin-top:30px;align-items:center}
+    .left{flex:1}
+    .tag{background:var(--glass);color:var(--muted);display:inline-block;padding:6px 10px;border-radius:999px;font-weight:600;font-size:13px}
+    h2{margin:16px 0 8px;font-size:30px;line-height:1.05}
+    p.lead{color:var(--muted);margin:0 0 18px}
+    .cta{display:flex;gap:12px;align-items:center}
+    .btn{background:var(--accent);color:white;padding:12px 16px;border-radius:10px;border:0;font-weight:700;cursor:pointer;text-decoration:none}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.08);color:var(--muted)}
+    .right{width:480px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;box-shadow:0 10px 40px rgba(2,6,23,0.6)}
+    .mock{height:320px;background:linear-gradient(90deg,#071a2b,#082133);border-radius:8px;border:1px solid rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center;color:var(--muted)}
+    section.features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+    .card{background:var(--card);padding:16px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
+    .card h3{margin:0 0 8px;font-size:16px}
+    .screens{display:flex;gap:12px;margin-top:20px;flex-wrap:wrap}
+    .screenshot{width:calc(33% - 8px);min-width:220px;height:140px;background:#07121a;border-radius:10px;border:1px solid rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center;color:var(--muted)}
+    .pricing{display:flex;gap:16px;margin-top:28px;align-items:flex-start}
+    .priceCard{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .foot{margin-top:36px;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;align-items:center}
+    a.inline{color:var(--accent);text-decoration:none}
+    /* small screen */
+    @media (max-width:900px){
+      .hero{flex-direction:column-reverse}
+      .right{width:100%}
+      section.features{grid-template-columns:repeat(1,1fr)}
+      .screens .screenshot{width:48%}
+    }
+    /* language switcher UI */
+    .lang-switch{display:flex;gap:8px;align-items:center}
+    .lang-btn{background:transparent;border:0;color:var(--muted);cursor:pointer;padding:6px 8px;border-radius:6px}
+    .lang-btn.active{background:rgba(255,255,255,0.03);color:#fff}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">
+        <div class="mark" aria-hidden="true"></div>
+        <div>
+          <h1>MiniPost Pro</h1>
+          <div class="lang">Offline API & Model Builder</div>
+        </div>
+      </div>
+
+      <div class="lang-switch">
+        <button class="lang-btn" id="lang-en">English</button>
+        <button class="lang-btn" id="lang-tr">Türkçe</button>
+      </div>
+    </header>
+
+    <!-- EN content -->
+    <main id="en" style="display:none">
+      <div class="hero">
+        <div class="left">
+          <div class="tag">Privacy-first • Offline • macOS</div>
+          <h2>Fast API testing. Instant model generation.</h2>
+          <p class="lead">Import Postman collections, send requests with headers/body, inspect responses and auto-generate data models for Swift, Python, TypeScript, Java and C# — all locally on your Mac.</p>
+
+          <div class="cta">
+            <a class="btn" id="buy-btn" href="#" target="_blank">Buy on Mac App Store — $4.99</a>
+            <a class="btn ghost" id="github-btn" href="#" target="_blank">View on GitHub</a>
+          </div>
+
+          <div class="screens" aria-hidden="true">
+            <div class="screenshot">Main UI (screenshot)</div>
+            <div class="screenshot">Postman Import (screenshot)</div>
+            <div class="screenshot">Model Generator (screenshot)</div>
+          </div>
+        </div>
+
+        <aside class="right" aria-hidden="true">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div style="font-weight:700">MiniPost Pro • v1.0</div>
+            <div style="color:var(--muted);font-size:13px">One-time purchase</div>
+          </div>
+
+          <div class="mock" style="margin-top:14px">
+            <div>
+              <div style="font-weight:700;margin-bottom:6px">Request: GET /users</div>
+              <div style="color:var(--muted);font-size:13px">Status 200 • 120 ms</div>
+              <pre style="background:transparent;color:#dff3ff;border:0;margin-top:12px">{"id":1,"name":"Alice"}</pre>
+            </div>
+          </div>
+
+          <div style="margin-top:12px;color:var(--muted);font-size:13px">
+            Privacy: <span style="color:#bfe0ff">No accounts • No telemetry • Local-only</span>
+          </div>
+        </aside>
+      </div>
+
+      <section class="features" aria-hidden="true">
+        <div class="card">
+          <h3>Postman Collection Import</h3>
+          <p class="lead" style="color:var(--muted)">Drop your `.postman_collection.json` and get all endpoints instantly.</p>
+        </div>
+        <div class="card">
+          <h3>Response Model Generator</h3>
+          <p class="lead" style="color:var(--muted)">Auto-generate typed models (Swift Codable, Pydantic, TypeScript interfaces, Java POJOs, C# classes).</p>
+        </div>
+        <div class="card">
+          <h3>Offline & Private</h3>
+          <p class="lead" style="color:var(--muted)">Everything stored locally. No signup required.</p>
+        </div>
+      </section>
+
+      <div class="pricing">
+        <div class="priceCard">
+          <h3>One-time License</h3>
+          <div style="font-size:28px;font-weight:800;margin-top:6px">$4.99</div>
+          <div style="color:var(--muted);margin-top:8px">Universal macOS binary • App Store distribution</div>
+          <div style="margin-top:12px">
+            <a class="btn" href="#" target="_blank">Buy on Mac App Store</a>
+          </div>
+        </div>
+
+        <div style="flex:1" class="priceCard">
+          <h3>Why choose MiniPost Pro?</h3>
+          <ul style="color:var(--muted);margin:8px 0 0 18px">
+            <li>Faster than web clients</li>
+            <li>Perfect for local development</li>
+            <li>Generates ready-to-use code models</li>
+            <li>Small, focused, no bloat</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="foot">
+        <div>© 2025 MiniPost Pro</div>
+        <div>
+          <a class="inline" href="privacy.html" target="_blank">Privacy Policy</a> ·
+          <a class="inline" href="terms.html" target="_blank">Terms</a> ·
+          <a class="inline" href="#" id="support-link">Support</a>
+        </div>
+      </div>
+    </main>
+
+    <!-- TR content -->
+    <main id="tr" style="display:none">
+      <div class="hero">
+        <div class="left">
+          <div class="tag">Gizlilik • Çevrimdışı • macOS</div>
+          <h2>Hızlı API testi. Anında model oluşturma.</h2>
+          <p class="lead">Postman koleksiyonlarını içe aktarın, istek gönderin, yanıtları inceleyin ve Swift, Python, TypeScript, Java, C# için model sınıfları otomatik oluşturun — tamamen lokal olarak.</p>
+
+          <div class="cta">
+            <a class="btn" id="buy-btn-tr" href="#" target="_blank">Mac App Store'da Satın Al — $4.99</a>
+            <a class="btn ghost" id="github-btn-tr" href="#" target="_blank">GitHub'da Görüntüle</a>
+          </div>
+
+          <div class="screens" aria-hidden="true">
+            <div class="screenshot">Ana Arayüz (görsel)</div>
+            <div class="screenshot">Postman İçe Aktar (görsel)</div>
+            <div class="screenshot">Model Üretici (görsel)</div>
+          </div>
+        </div>
+
+        <aside class="right" aria-hidden="true">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div style="font-weight:700">MiniPost Pro • v1.0</div>
+            <div style="color:var(--muted);font-size:13px">Tek seferlik lisans</div>
+          </div>
+
+          <div class="mock" style="margin-top:14px">
+            <div>
+              <div style="font-weight:700;margin-bottom:6px">Request: GET /users</div>
+              <div style="color:var(--muted);font-size:13px">Status 200 • 120 ms</div>
+              <pre style="background:transparent;color:#dff3ff;border:0;margin-top:12px">{"id":1,"name":"Alice"}</pre>
+            </div>
+          </div>
+
+          <div style="margin-top:12px;color:var(--muted);font-size:13px">
+            Gizlilik: <span style="color:#bfe0ff">Hesapsız • Telemetri yok • Lokal</span>
+          </div>
+        </aside>
+      </div>
+
+      <section class="features" aria-hidden="true">
+        <div class="card">
+          <h3>Postman Koleksiyon İçe Aktarma</h3>
+          <p class="lead" style="color:var(--muted)">`.postman_collection.json` dosyalarını sürükleyip tüm endpoint’leri anında ekleyin.</p>
+        </div>
+        <div class="card">
+          <h3>Response Model Oluşturucu</h3>
+          <p class="lead" style="color:var(--muted)">JSON yanıtından otomatik model üretin (Swift Codable, Pydantic, TypeScript, Java, C#).</p>
+        </div>
+        <div class="card">
+          <h3>Çevrimdışı & Gizlilik</h3>
+          <p class="lead" style="color:var(--muted)">Tüm veriler cihazınızda kalır. Hesap gerekmez.</p>
+        </div>
+      </section>
+
+      <div class="pricing">
+        <div class="priceCard">
+          <h3>Tek Seferlik Lisans</h3>
+          <div style="font-size:28px;font-weight:800;margin-top:6px">$4.99</div>
+          <div style="color:var(--muted);margin-top:8px">Universal macOS binary • App Store dağıtımı</div>
+          <div style="margin-top:12px">
+            <a class="btn" href="#" target="_blank">Mac App Store'da Satın Al</a>
+          </div>
+        </div>
+
+        <div style="flex:1" class="priceCard">
+          <h3>Neden MiniPost Pro?</h3>
+          <ul style="color:var(--muted);margin:8px 0 0 18px">
+            <li>Web tabanlı araçlardan daha hızlı</li>
+            <li>Geliştirme için ideal lokal çözüm</li>
+            <li>Yanıtları model sınıflarına dönüştürür</li>
+            <li>Küçük ve odaklı — gereksiz özellik yok</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="foot">
+        <div>© 2025 MiniPost Pro</div>
+        <div>
+          <a class="inline" href="privacy.html" target="_blank">Gizlilik Politikası</a> ·
+          <a class="inline" href="terms.html" target="_blank">Kullanım Koşulları</a> ·
+          <a class="inline" href="#" id="support-link-tr">Destek</a>
+        </div>
+      </div>
+    </main>
+
+  </div>
+
+  <script>
+    // Language switching + persistence
+    const elEN = document.getElementById('en');
+    const elTR = document.getElementById('tr');
+    const btnEN = document.getElementById('lang-en');
+    const btnTR = document.getElementById('lang-tr');
+
+    function setLang(lang){
+      if(lang === 'tr'){ elEN.style.display='none'; elTR.style.display='block'; btnTR.classList.add('active'); btnEN.classList.remove('active'); localStorage.setItem('mp_lang','tr'); }
+      else { elEN.style.display='block'; elTR.style.display='none'; btnEN.classList.add('active'); btnTR.classList.remove('active'); localStorage.setItem('mp_lang','en'); }
+    }
+
+    btnEN.addEventListener('click', ()=>setLang('en'));
+    btnTR.addEventListener('click', ()=>setLang('tr'));
+
+    const saved = localStorage.getItem('mp_lang') || (navigator.language && navigator.language.startsWith('tr') ? 'tr' : 'en');
+    setLang(saved);
+
+    // Hook up placeholders: replace hrefs with your real links
+    document.getElementById('github-btn').href = 'https://github.com/yourusername/minipostpro';
+    document.getElementById('github-btn-tr').href = 'https://github.com/yourusername/minipostpro';
+    document.getElementById('buy-btn').href = 'https://apps.apple.com/app/idYOUR_APPSTORE_ID';
+    document.getElementById('buy-btn-tr').href = 'https://apps.apple.com/app/idYOUR_APPSTORE_ID';
+    document.getElementById('support-link').href = 'https://github.com/yourusername/minipostpro/issues';
+    document.getElementById('support-link-tr').href = 'https://github.com/yourusername/minipostpro/issues';
+  </script>
+</body>
+</html>
