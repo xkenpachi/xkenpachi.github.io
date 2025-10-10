@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - MiniPost Pro</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #fafafa;
+      color: #333;
+      max-width: 850px;
+      margin: 50px auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    h1, h2, h3 { color: #111; }
+    a {
+      color: #007aff;
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+    .lang-switch {
+      text-align: right;
+      font-size: 0.9em;
+      margin-bottom: 10px;
+    }
+    section { display: none; }
+    section.active { display: block; }
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #777;
+      border-top: 1px solid #ddd;
+      padding-top: 20px;
+    }
+  </style>
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+      document.getElementById(lang).classList.add('active');
+      localStorage.setItem('minipostpro_lang', lang);
+    }
+    window.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('minipostpro_lang') || 'en';
+      switchLang(saved);
+    });
+  </script>
+</head>
+<body>
+  <div class="lang-switch">
+    <a href="#" onclick="switchLang('en')">English</a> | 
+    <a href="#" onclick="switchLang('tr')">Türkçe</a>
+  </div>
+
+  <!-- English Version -->
+  <section id="en">
+    <h1>Privacy Policy</h1>
+    <p><strong>Last Updated:</strong> October 7, 2025</p>
+
+    <h2>1. Introduction</h2>
+    <p>MiniPost Pro (“we”, “our”, or “us”) values your privacy. This Privacy Policy explains how your information is handled when using our macOS application.</p>
+
+    <h2>2. Data Collection</h2>
+    <ul>
+      <li><strong>Personal Data:</strong> We do not collect, store, or share any personal information.</li>
+      <li><strong>Usage Data:</strong> MiniPost Pro runs entirely offline. No analytics, crash reports, or telemetry data are collected.</li>
+      <li><strong>Network Requests:</strong> All requests are initiated manually by the user and sent directly to external APIs defined by the user.</li>
+    </ul>
+
+    <h2>3. Local Data Storage</h2>
+    <p>MiniPost Pro may store request history, environment variables, and settings locally on your Mac. This data never leaves your device.</p>
+
+    <h2>4. Data Sharing</h2>
+    <p>We do not share or transmit any data to third parties. All API requests and responses remain on your local device.</p>
+
+    <h2>5. Security</h2>
+    <p>All outgoing API requests use HTTPS encryption provided by macOS. Sensitive data such as API keys are stored securely on your device only.</p>
+
+    <h2>6. User Rights</h2>
+    <p>Since no personal data is stored on our servers, all app data can be deleted by uninstalling MiniPost Pro.</p>
+
+    <h2>7. Compliance</h2>
+    <ul>
+      <li>GDPR: Compliant — no personal data processing or tracking occurs.</li>
+      <li>CCPA: Compliant — no user data is sold, shared, or monetized.</li>
+    </ul>
+
+    <h2>8. Contact</h2>
+    <p>For questions about this policy, contact us at:
+      <a href="mailto:support@minipostpro.app">support@minipostpro.app</a></p>
+
+    <footer>
+      <p>© 2025 MiniPost Pro. All rights reserved.</p>
+    </footer>
+  </section>
+
+  <!-- Turkish Version -->
+  <section id="tr">
+    <h1>Gizlilik Politikası</h1>
+    <p><strong>Son Güncelleme:</strong> 7 Ekim 2025</p>
+
+    <h2>1. Giriş</h2>
+    <p>MiniPost Pro (“biz”, “uygulama” veya “geliştirici”) olarak gizliliğinize önem veriyoruz. Bu sayfa, uygulamamızı kullanırken verilerinizin nasıl işlendiğini açıklar.</p>
+
+    <h2>2. Veri Toplama</h2>
+    <ul>
+      <li><strong>Kişisel Veri:</strong> Herhangi bir kişisel bilgi toplamaz, saklamaz veya paylaşmayız.</li>
+      <li><strong>Kullanım Verisi:</strong> MiniPost Pro tamamen offline çalışır. Hiçbir analiz, çökme raporu veya telemetri verisi toplanmaz.</li>
+      <li><strong>Ağ İstekleri:</strong> Tüm istekler kullanıcı tarafından başlatılır ve yalnızca kullanıcının tanımladığı harici API’lere gönderilir.</li>
+    </ul>
+
+    <h2>3. Yerel Veri Saklama</h2>
+    <p>Uygulama, istek geçmişi, ortam değişkenleri ve ayarları cihazınızda yerel olarak tutabilir. Bu veriler cihaz dışına çıkmaz.</p>
+
+    <h2>4. Veri Paylaşımı</h2>
+    <p>Üçüncü taraflarla hiçbir veri paylaşımı yapılmaz. API istekleri ve yanıtları tamamen yerel olarak saklanır.</p>
+
+    <h2>5. Güvenlik</h2>
+    <p>Tüm API istekleri macOS’un sağladığı HTTPS şifrelemesiyle güvenli şekilde iletilir. API anahtarları gibi hassas bilgiler yalnızca cihazınızda güvenli şekilde saklanır.</p>
+
+    <h2>6. Kullanıcı Hakları</h2>
+    <p>Sunucularımızda hiçbir kişisel veri tutulmadığından, uygulamayı kaldırarak tüm verilerinizi kalıcı olarak silebilirsiniz.</p>
+
+    <h2>7. Uyumluluk</h2>
+    <ul>
+      <li>GDPR: Uyumlu — hiçbir kişisel veri işleme veya izleme yapılmaz.</li>
+      <li>KVKK: Uyumlu — kullanıcı verileri toplanmaz, paylaşılmaz veya satılmaz.</li>
+    </ul>
+
+    <h2>8. İletişim</h2>
+    <p>Bu gizlilik politikasıyla ilgili sorularınız için bizimle iletişime geçebilirsiniz:<br>
+      <a href="mailto:support@minipostpro.app">support@minipostpro.app</a></p>
+
+    <footer>
+      <p>© 2025 MiniPost Pro. Tüm hakları saklıdır.</p>
+    </footer>
+  </section>
+</body>
+</html>
