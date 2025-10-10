@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Use - MiniPost Pro</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #fafafa;
+      color: #333;
+      max-width: 850px;
+      margin: 50px auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    h1, h2, h3 { color: #111; }
+    a {
+      color: #007aff;
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+    .lang-switch {
+      text-align: right;
+      font-size: 0.9em;
+      margin-bottom: 10px;
+    }
+    section { display: none; }
+    section.active { display: block; }
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #777;
+      border-top: 1px solid #ddd;
+      padding-top: 20px;
+    }
+  </style>
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+      document.getElementById(lang).classList.add('active');
+      localStorage.setItem('minipostpro_terms_lang', lang);
+    }
+    window.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('minipostpro_terms_lang') || 'en';
+      switchLang(saved);
+    });
+  </script>
+</head>
+<body>
+  <div class="lang-switch">
+    <a href="#" onclick="switchLang('en')">English</a> | 
+    <a href="#" onclick="switchLang('tr')">Türkçe</a>
+  </div>
+
+  <!-- English Version -->
+  <section id="en">
+    <h1>Terms of Use</h1>
+    <p><strong>Last Updated:</strong> October 7, 2025</p>
+
+    <h2>1. Acceptance of Terms</h2>
+    <p>By downloading or using MiniPost Pro, you agree to be bound by these Terms of Use. If you do not agree, please do not use the app.</p>
+
+    <h2>2. License</h2>
+    <p>MiniPost Pro is licensed, not sold. You are granted a personal, non-transferable, and non-exclusive license to use the app on your macOS device in accordance with these terms.</p>
+
+    <h2>3. Restrictions</h2>
+    <ul>
+      <li>You may not copy, modify, or distribute the app without permission.</li>
+      <li>You may not use the app for unlawful or malicious purposes.</li>
+      <li>You may not attempt to reverse engineer, decompile, or extract source code.</li>
+    </ul>
+
+    <h2>4. Data and Privacy</h2>
+    <p>MiniPost Pro operates offline. No personal or analytics data is collected or shared. For details, see our <a href="privacy.html">Privacy Policy</a>.</p>
+
+    <h2>5. Updates and Availability</h2>
+    <p>We may update or discontinue MiniPost Pro at any time without prior notice. Continued use of the app means acceptance of any modified terms.</p>
+
+    <h2>6. Disclaimer of Warranties</h2>
+    <p>MiniPost Pro is provided “as is” without warranty of any kind. We do not guarantee that the app will be error-free, secure, or available at all times.</p>
+
+    <h2>7. Limitation of Liability</h2>
+    <p>In no event shall the developer be liable for any damages arising out of the use or inability to use MiniPost Pro, including data loss or service interruption.</p>
+
+    <h2>8. Governing Law</h2>
+    <p>These Terms are governed by and construed in accordance with the laws of the Republic of Turkey, without regard to conflict of law principles.</p>
+
+    <h2>9. Contact</h2>
+    <p>If you have questions regarding these Terms, please contact us at:  
+      <a href="mailto:support@minipostpro.app">support@minipostpro.app</a></p>
+
+    <footer>
+      <p>© 2025 MiniPost Pro. All rights reserved.</p>
+    </footer>
+  </section>
+
+  <!-- Turkish Version -->
+  <section id="tr">
+    <h1>Kullanım Koşulları</h1>
+    <p><strong>Son Güncelleme:</strong> 7 Ekim 2025</p>
+
+    <h2>1. Koşulların Kabulü</h2>
+    <p>MiniPost Pro uygulamasını indirerek veya kullanarak, bu Kullanım Koşulları’nı kabul etmiş olursunuz. Kabul etmiyorsanız uygulamayı kullanmayınız.</p>
+
+    <h2>2. Lisans</h2>
+    <p>MiniPost Pro satılmamış, lisanslanmıştır. Bu uygulamayı yalnızca kendi macOS cihazınızda, kişisel kullanım amacıyla, devredilemez ve münhasır olmayan bir lisansla kullanabilirsiniz.</p>
+
+    <h2>3. Kısıtlamalar</h2>
+    <ul>
+      <li>Uygulamayı izinsiz kopyalayamaz, değiştiremez veya dağıtamazsınız.</li>
+      <li>Uygulamayı yasa dışı veya kötü amaçlarla kullanamazsınız.</li>
+      <li>Kaynak kodunu çıkarmak, tersine mühendislik yapmak veya derlemeyi çözümlemek yasaktır.</li>
+    </ul>
+
+    <h2>4. Veri ve Gizlilik</h2>
+    <p>MiniPost Pro tamamen offline çalışır. Kişisel veya analiz verisi toplanmaz, paylaşılmaz. Detaylı bilgi için <a href="privacy.html">Gizlilik Politikası</a> sayfamıza bakınız.</p>
+
+    <h2>5. Güncellemeler ve Erişilebilirlik</h2>
+    <p>Uygulama zaman zaman güncellenebilir veya kaldırılabilir. Uygulamayı kullanmaya devam etmeniz, güncellenmiş koşulları kabul ettiğiniz anlamına gelir.</p>
+
+    <h2>6. Garanti Feragati</h2>
+    <p>MiniPost Pro “olduğu gibi” sunulur; herhangi bir hata, kesinti veya güvenlik garantisi verilmez.</p>
+
+    <h2>7. Sorumluluk Sınırlaması</h2>
+    <p>MiniPost Pro’nun kullanımı sonucunda oluşabilecek veri kaybı veya kesinti gibi durumlardan geliştirici sorumlu tutulamaz.</p>
+
+    <h2>8. Yürürlükteki Hukuk</h2>
+    <p>Bu koşullar Türkiye Cumhuriyeti yasalarına tabidir ve buna göre yorumlanır.</p>
+
+    <h2>9. İletişim</h2>
+    <p>Bu koşullarla ilgili sorularınız için bizimle iletişime geçebilirsiniz:<br>
+      <a href="mailto:support@minipostpro.app">support@minipostpro.app</a></p>
+
+    <footer>
+      <p>© 2025 MiniPost Pro. Tüm hakları saklıdır.</p>
+    </footer>
+  </section>
+</body>
+</html>
