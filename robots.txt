@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://xkenpachi.github.io/sitemap.xml
